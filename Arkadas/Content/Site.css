@@ -1,0 +1,79 @@
+﻿body {
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-nav > li > a {
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.book-list {
+    list-style:none;
+    margin:0 0 50px 0;
+    padding:0;
+    float:left;
+    width:100%;
+}
+.book-list li {
+    float:left;
+    width:calc(33.333% - 10px);
+    margin:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    padding:10px;
+}
+
+.book-list .image {
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+}
+.book-list .image img {
+    width:100%;
+}
+.book-list h2 {
+    float:left;
+    width:100%;
+    padding:10px 5px;
+    margin:10px 0;
+    font-size:16px;
+    font-weight:bold;
+    border-bottom:1px solid #ccc;
+}
+
+.book-list .price {
+    float:left;
+    width:100%;
+    font-size:14px;
+    height:80px;
+    padding:0 5px;
+}
+.book-list .desc {
+    float:left;
+    width:100%;
+    font-size:12px;
+    line-height:18px;
+    height:150px;
+    overflow:auto;
+    padding:0 5px;
+}

@@ -1,0 +1,43 @@
+﻿@model Arkadas.ViewModels.HomeIndexViewModel
+@{
+    ViewBag.Title = "Anasayfa";
+    var ProductList = Model.ProductList;
+    var RoleName = Model.UserRoleName;
+}
+
+@*<div class="jumbotron">
+    <img src="~/Images/logo.jpeg" width="100px" /><h3>Arkadaş</h3>
+    <p class="lead">@Model.UserRoleName</p>
+</div>*@
+
+
+<ul class="book-list">
+@foreach (var product in ProductList)
+{
+
+    <li class="item">
+        <div class="image">           
+            <img src="@product.ImageUrl" />
+        </div>
+        <h2>@product.Product.Name</h2>  
+        <h5>User Role: @Model.UserRoleName</h5>
+
+        <div class="price">
+            @if (RoleName == "Admin")
+            {
+                <p><strong>Admin Fiyatı:</strong> @product.Product.AdminFiyat TL</p>
+            }
+
+            @if (RoleName == "Admin" || RoleName == "Bayi")
+            {
+                <p><strong>Bayi Fiyatı:</strong> @product.Product.BayiFiyat TL</p>
+            }
+            <p><strong>Müşteri Fiyatı:</strong> @product.Product.MusteriFiyat TL</p>
+        </div>
+        <div class="desc">
+            <p>@Html.Raw(product.DetailExplaination)</p>
+        </div>
+    </li>
+}
+</ul>
+
